@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/css/style.css">
+    <title>Витрина</title>
+</head>
+<body>
+    <header></header>
+
+    <main class="l-container-4" id="main">
+
+        <h1 class="u-text-center">Витрина
+        </h1>
+
+        <div class="courses u-mt-30">
+            <form class="courses-form form" id="filterform" role="form" name="form">
+                <div>
+                    <select id="subj" name="subj" onchange="subjFilter()">
+                        <option value="">Все предметы</option>
+                        <option >Алгебра</option>
+                        <option >Английский язык</option>
+                        <option >Биология</option>
+                        <option >География</option>
+                        <option >Геометрия</option>
+                        <option >Демо-версия</option>
+                        <option >Информатика</option>
+                        <option >История</option>
+                        <option >Литература</option>
+                        <option >Математика</option>
+                        <option >Обществознание</option>
+                        <option >Окружающий мир</option>
+                        <option >Робототехника</option>
+                        <option >Русский язык</option>
+                        <option >Физика</option>
+                        <option >Химия</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="genre" name="genre" onchange="genreFilter()">
+                        <option value="">Все жанры</option>
+                        <option >Демо</option>
+                        <option >Задачник</option>
+                        <option >Подготовка к ВПР</option>
+                        <option >Подготовка к ЕГЭ</option>
+                        <option >Рабочая тетрадь</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="grade" name="grade" onchange="gradeFilter()">
+                        <option value="">Все классы</option>
+                        <option >1</option>
+                        <option >2</option>
+                        <option >3</option>
+                        <option >4</option>
+                        <option >5</option>
+                        <option >6</option>
+                        <option >7</option>
+                        <option >8</option>
+                        <option >9</option>
+                        <option >10</option>
+                        <option >11</option>
+                    </select>
+                </div>
+                <div>
+                    <input class="borderFind" type="text" placeholder="Поиск по названию" id="search" name="search" onkeyup="searchFunc()">
+                    <!--<button class="courses-form-search-btn" type="submit" title="Найти"></button>-->
+                </div>
+            </form>
+        </div>
+
+        <p class="sci-controls">
+            <button href="#" class="pure-button pure-button-primary btn-fluid" id="showBonus">Показать рубли/бонусы</button>
+        </p>
+
+        <h1 class="u-text-center" id="InfoH1" style="display:none"></h1>
+        <!--<span class="h1" id="infoNotFound"></span>-->
+
+        <ul class="courses-list" id="courseslist">
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="courses-sci">
+                <div class="sci-figure">
+                    <img class="image" src="" alt="Демо-версия" />
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title"></p>
+                    <p class="sci-grade"></p>
+                    <p class="sci-genre"></p>
+
+
+                    <p class="sci-meta"><a href="#">Подробнее</a></p>
+                    <p class="sci-controls">
+                        <a href="#" class="pure-button pure-button-primary btn-fluid price"></a>
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="scripts/parseJson.js"></script>
+</body>
+</html>
